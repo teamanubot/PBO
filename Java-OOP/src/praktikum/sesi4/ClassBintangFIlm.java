@@ -1,13 +1,9 @@
 package praktikum.sesi4;
 
 class BintangFIlm {
-    private String nama;
-    private boolean  pria;
+    private final String nama;
+    private final boolean pria;
     BintangFIlm(String nama, boolean pria) {
-        this.nama = nama;
-        this.pria = pria;
-    }
-    private void Isikan(String nama, boolean pria) {
         this.nama = nama;
         this.pria = pria;
     }

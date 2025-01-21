@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="492.0" prefWidth="960.0" style="-fx-background-color: F72C5B;" stylesheets="/styles/subscription_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SubscriptionController">
+   <children>
+      <!-- Subscription Table -->
+      <TableView fx:id="subscriptionTable" layoutX="-4.0" prefHeight="494.0" prefWidth="608.0" styleClass="styled-table">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="50" text="ID" />
+            <TableColumn fx:id="colCustomerName" prefWidth="100" text="Customer Name" />
+            <TableColumn fx:id="colPlanName" prefWidth="125.0" text="Plan Name" />
+            <TableColumn fx:id="colPrice" text="Price" />
+            <TableColumn fx:id="colStartDate" prefWidth="114.0" text="Start Date" />
+            <TableColumn fx:id="colEndDate" prefWidth="138.0" text="End Date" />
+        </columns>
+      </TableView>
+
+      <!-- Form Fields with Styling -->
+      <ComboBox fx:id="customerIdField" layoutX="674.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="221.0" styleClass="styled-combobox" />
+      <ComboBox fx:id="planNameField" layoutX="674.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="221.0" styleClass="styled-combobox" />
+      <TextField fx:id="priceField" layoutX="674.0" layoutY="181.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="221.0" styleClass="styled-textfield" />
+      <DatePicker fx:id="startDateField" layoutX="674.0" layoutY="242.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="221.0" styleClass="styled-datepicker" />
+      <DatePicker fx:id="endDateField" layoutX="674.0" layoutY="302.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="221.0" styleClass="styled-datepicker" />
+      <Label layoutX="675.0" layoutY="34.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Select Customer" />
+      <Label layoutX="674.0" layoutY="98.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Select Plan" />
+      <Label layoutX="674.0" layoutY="160.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Price" />
+      <Label layoutX="674.0" layoutY="220.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Start Date" />
+      <Label layoutX="674.0" layoutY="280.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="End Date" />
+      <VBox alignment="CENTER" prefHeight="150.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="610.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="addButton" onAction="#addSubscription" prefHeight="26.0" prefWidth="221.0" style="-fx-background-color: #3D3D3D; -fx-font-size: 13; -fx-background-radius: 20;" styleClass="styled-button" text="Add" textFill="WHITE" />
+            <Button fx:id="updateButton" onAction="#updateSubscription" prefHeight="26.0" prefWidth="221.0" style="-fx-background-color: #3D3D3D; -fx-background-radius: 20;" styleClass="styled-button" text="Update" textFill="WHITE" />
+            <Button fx:id="deleteButton" onAction="#deleteSubscription" prefHeight="26.0" prefWidth="221.0" style="-fx-background-color: #3D3D3D; -fx-background-radius: 20;" styleClass="styled-button" text="Delete" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

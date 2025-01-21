@@ -14,6 +14,7 @@ public class HurufDigit {
             System.out.println(karakter + " adalah digit");
         } else {
             System.out.println(karakter + " bukan huruf atau digit");
+            scan.close();
         }
     }
 }

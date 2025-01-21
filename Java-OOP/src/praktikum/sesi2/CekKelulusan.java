@@ -14,6 +14,7 @@ public class CekKelulusan {
             System.out.println("Selamat " + nama + ", Anda Lulus");
         } else {
             System.out.println("Maaf " + nama + ", Anda Gagal");
+            scan.close();
         }
     }
 }

@@ -1,0 +1,51 @@
+/* Navbar Styling */
+.navbar {
+    -fx-background-color: #2c3e50; /* Dark blue */
+    -fx-padding: 10; /* Padding untuk ruang dalam */
+    -fx-spacing: 10; /* Jarak antar elemen di dalam navbar */
+}
+
+/* Navbar Button Styling */
+.navbar-button {
+    -fx-background-color: #2ecc71; /* Hijau terang */
+    -fx-text-fill: white; /* Warna teks putih */
+    -fx-font-size: 14px; /* Ukuran font */
+    -fx-padding: 5; /* Padding dalam tombol */
+    -fx-border-radius: 5; /* Radius untuk border */
+    -fx-background-radius: 5; /* Radius untuk background */
+}
+
+.navbar-button:hover {
+    -fx-background-color: #27ae60; /* Hijau lebih gelap saat hover */
+}
+
+/* Navbar Button2 Styling */
+.navbar-button2 {
+    -fx-background-color: red; /* Warna tombol merah */
+    -fx-text-fill: white; /* Warna teks putih */
+    -fx-font-size: 14px; /* Ukuran font */
+    -fx-padding: 5; /* Padding dalam tombol */
+    -fx-border-radius: 5; /* Radius untuk border */
+    -fx-background-radius: 5; /* Radius untuk background */
+}
+
+.navbar-button2:hover {
+    -fx-background-color: darkred; /* Warna merah gelap saat hover */
+}
+
+/* Title Styling */
+.title {
+    -fx-font-size: 24px; /* Ukuran font besar */
+    -fx-font-weight: bold; /* Font tebal */
+    -fx-text-fill: #34495e; /* Warna biru tua */
+}
+
+/* Content Box Styling */
+.content-box {
+    -fx-border-color: #bdc3c7; /* Warna border abu-abu */
+    -fx-border-width: 2; /* Ketebalan border */
+    -fx-padding: 20; /* Padding dalam konten */
+    -fx-background-color: #ecf0f1; /* Warna latar abu terang */
+    -fx-border-radius: 10; /* Radius untuk border */
+    -fx-background-radius: 10; /* Radius untuk background */
+}

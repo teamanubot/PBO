@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="492.0" prefWidth="960.0" style="-fx-background-color: F72C5B;" stylesheets="/styles/customer_style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CustomerController">
+   <children>
+      <!-- TableView with styling -->
+      <TableView fx:id="customerTable" layoutX="-4.0" prefHeight="494.0" prefWidth="608.0" styleClass="styled-table">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="50" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="150" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="150" text="Email" />
+            <TableColumn fx:id="colPhone" prefWidth="100" text="Phone" />
+            <TableColumn fx:id="colAddress" prefWidth="150" text="Address" />
+        </columns>
+      </TableView>
+      <Label layoutX="675.0" layoutY="34.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Name" />
+
+      <!-- Form Fields with Styling -->
+      <TextField fx:id="nameField" layoutX="674.0" layoutY="57.0" prefHeight="26.0" prefWidth="221.0" style="-fx-font-size: 14;" styleClass="styled-textfield" />
+      <Label layoutX="674.0" layoutY="98.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Email" />
+      <TextField fx:id="emailField" layoutX="673.0" layoutY="120.0" prefHeight="26.0" prefWidth="221.0" style="-fx-font-size: 14;" styleClass="styled-textfield" />
+      <Label layoutX="675.0" layoutY="160.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Phone" />
+      <TextField fx:id="phoneField" layoutX="674.0" layoutY="181.0" prefHeight="26.0" prefWidth="221.0" style="-fx-font-size: 14;" styleClass="styled-textfield" />
+      <Label layoutX="675.0" layoutY="220.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Address" />
+      <TextField fx:id="addressField" layoutX="673.0" layoutY="244.0" prefHeight="26.0" prefWidth="221.0" style="-fx-font-size: 14;" styleClass="styled-textfield" />
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="605.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="addButton" onAction="#addCustomer" prefHeight="26.0" prefWidth="221.0" style="-fx-background-color: #3D3D3D; -fx-font-size: 13; -fx-background-radius: 20;" styleClass="styled-button" text="Add" textFill="WHITE" />
+            <Button fx:id="updateButton" onAction="#updateCustomer" prefHeight="26.0" prefWidth="221.0" style="-fx-background-color: #3D3D3D; -fx-background-radius: 20;" styleClass="styled-button" text="Update" textFill="WHITE" />
+            <Button fx:id="deleteButton" onAction="#deleteCustomer" prefHeight="26.0" prefWidth="221.0" style="-fx-background-color: #3D3D3D; -fx-background-radius: 20;" styleClass="styled-button" text="Delete" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

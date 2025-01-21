@@ -108,20 +108,14 @@ class Nilai {
 
     public String getKeterangan() {
         char index = getIndex();
-        switch (index) {
-            case 'A':
-                return "Sangat Baik";
-            case 'B':
-                return "Baik";
-            case 'C':
-                return "Cukup";
-            case 'D':
-                return "Kurang";
-            case 'E':
-                return "Sangat Kurang";
-            default:
-                return "Tidak Valid";
-        }
+        return switch (index) {
+            case 'A' -> "Sangat Baik";
+            case 'B' -> "Baik";
+            case 'C' -> "Cukup";
+            case 'D' -> "Kurang";
+            case 'E' -> "Sangat Kurang";
+            default -> "Tidak Valid";
+        };
     }
 }
 
@@ -131,7 +125,11 @@ class Siswa {
 
     public Siswa(String nama, int nilaiUjian) {
         this.nama = nama;
-        setNilaiUjian(nilaiUjian);
+        if (nilaiUjian >= 0 && nilaiUjian <= 100) {
+            this.nilaiUjian = nilaiUjian;
+        } else {
+            System.out.println("Nilai ujian harus di antara 0 dan 100.");
+        }
     }
 
     public String getNama() {
@@ -217,7 +215,7 @@ public class Sesi5 {
             int pilihan = scanner.nextInt();
 
             switch (pilihan) {
-                case 1:
+                case 1 -> {
                     Mahasiswa mahasiswa1 = new Mahasiswa("Rivai", 22, "Teknik Informatika");
                     System.out.println("Nama Mahasiswa : " + mahasiswa1.nama);
                     System.out.println("Usia Mahasiswa : " + mahasiswa1.usia);
@@ -225,8 +223,8 @@ public class Sesi5 {
                     mahasiswa1.setJurusan("Sistem Informasi");
                     System.out.println("Jurusan Mahasiswa : " + mahasiswa1.getJurusan());
                     mahasiswa1.tampilkanInfo();
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     Mobil mobil1 = new Mobil("Toyota", 2022, 300000000L);
                     System.out.println("Merk Mobil : " + mobil1.merk);
                     System.out.println("Tahun Produksi Mobil : " + mobil1.tahunProduksi);
@@ -234,8 +232,8 @@ public class Sesi5 {
                     mobil1.setHarga(350000000L);
                     System.out.println("Harga Mobil Setelah Diubah : " + mobil1.getHarga());
                     mobil1.tampilkanInfo();
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     Nilai n = new Nilai();
                     n.setQuis(60);
                     n.setUTS(80);
@@ -246,8 +244,8 @@ public class Sesi5 {
                     System.out.println("Nilai Akhir : " + n.getNA());
                     System.out.println("Index : " + n.getIndex());
                     System.out.println("Keterangan : " + n.getKeterangan());
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     Siswa siswa1 = new Siswa("Budi", 85);
                     siswa1.tampilkanInfo();
                     siswa1.setNama("Rivai");
@@ -255,8 +253,8 @@ public class Sesi5 {
                     System.out.println("\nSetelah Diubah : ");
                     siswa1.tampilkanInfo();
                     siswa1.setNilaiUjian(105);
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     Waktu w = new Waktu();
                     System.out.println("1. Total Menit : " + w.getTotalMenit());
                     w.setJam(10);
@@ -269,13 +267,13 @@ public class Sesi5 {
                     w.tambahMenit(40);
                     System.out.println("5. JAM : " + w.getJam() + " MENIT : " + w.getMenit());
                     w.tampilWaktu();
-                    break;
-                case 6:
+                }
+                case 6 -> {
                     System.out.println("Keluar dari program.");
                     scanner.close();
                     return;
-                default:
-                    System.out.println("Pilihan tidak valid.");
+                }
+                default -> System.out.println("Pilihan tidak valid.");
             }
             System.out.println();
         }

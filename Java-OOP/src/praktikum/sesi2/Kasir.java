@@ -24,6 +24,7 @@ public class Kasir {
                 diskon = 5000;
             } else {
                 diskon = 0;
+                scan.close();
             }
         }
         bayar = belanja - diskon;

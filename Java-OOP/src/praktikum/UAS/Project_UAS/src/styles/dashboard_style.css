@@ -1,0 +1,101 @@
+/* Navbar Styling */
+.navbar {
+  -fx-background-color: linear-gradient(to bottom, #34495e, #2c3e50); /* Gradien */
+  -fx-padding: 10;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2); /* Shadow */
+}
+
+.navbar:hover {
+  -fx-background-color: #34495e; /* Warna lebih gelap saat hover */
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 15, 0, 0, 2); /* Lebih gelap saat hover */
+}
+
+/* Navbar Button Styling */
+.navbar button {
+  -fx-text-fill: white;
+  -fx-background-color: transparent;
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-border-radius: 5px;
+  -fx-padding: 5px 10px;
+}
+
+.navbar button:hover {
+  -fx-background-color: #1abc9c; /* Warna hijau terang saat hover */
+  -fx-text-fill: black;
+  -fx-cursor: hand; /* Ubah kursor jadi pointer */
+}
+
+/* Content Pane Styling */
+.content-pane {
+  -fx-opacity: 1;
+  -fx-transition: opacity 0.5s ease; /* Transisi halus */
+}
+
+.content-pane-enter {
+  -fx-opacity: 0;
+  -fx-translate-y: -20; /* Konten masuk dari atas */
+}
+
+.content-pane-exit {
+  -fx-opacity: 0;
+  -fx-translate-y: 20; /* Konten keluar ke bawah */
+}
+
+/* Welcome Text Styling */
+.text-welcome {
+  -fx-font-size: 26px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #1abc9c; /* Warna hijau terang */
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 2, 2); /* Shadow */
+}
+
+.text-welcome:hover {
+  -fx-text-fill: #16a085; /* Warna lebih gelap saat hover */
+}
+
+/* Table Row Hover Effect */
+.table-row-cell:hover {
+  -fx-background-color: #ecf0f1; /* Warna terang saat hover */
+  -fx-cursor: hand; /* Ubah kursor jadi pointer */
+}
+
+/* Main Container Style */
+.main-container {
+  -fx-background-color: #f4f4f9; /* Light background */
+  -fx-padding: 10;
+}
+
+/* Navbar Styling */
+.navbar {
+  -fx-background-color: #2c3e50; /* Dark blue */
+  -fx-padding: 10;
+}
+
+.navbar-button {
+  -fx-text-fill: white;
+  -fx-background-color: transparent;
+  -fx-font-size: 14px;
+  -fx-padding: 5 15;
+}
+
+.navbar-button:hover {
+  -fx-background-color: #34495e; /* Slightly darker on hover */
+  -fx-cursor: hand;
+}
+
+/* Content Pane Styling */
+.content-pane {
+  -fx-background-color: #ffffff; /* White background */
+  -fx-padding: 20;
+  -fx-border-color: #dcdcdc;
+  -fx-border-width: 1;
+  -fx-border-radius: 5;
+}
+
+/* Welcome Text Styling */
+.welcome-text {
+  -fx-font-size: 26px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #2c3e50;
+}

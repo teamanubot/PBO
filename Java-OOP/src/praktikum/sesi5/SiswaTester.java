@@ -6,7 +6,11 @@ class Siswa {
 
     public Siswa(String nama, int nilaiUjian) {
         this.nama = nama;
-        setNilaiUjian(nilaiUjian);
+        if (nilaiUjian >= 0 && nilaiUjian <= 100) {
+            this.nilaiUjian = nilaiUjian;
+        } else {
+            System.out.println("Nilai ujian harus di antara 0 dan 100.");
+        }
     }
 
     public String getNama() {

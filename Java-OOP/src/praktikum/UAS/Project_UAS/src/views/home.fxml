@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.HomeController">
+    <VBox spacing="20" alignment="CENTER" prefWidth="800" prefHeight="600">
+        <!-- Navbar -->
+        <HBox styleClass="navbar" prefHeight="50" alignment="CENTER_RIGHT">
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="Login" onAction="#goToLogin" styleClass="navbar-button" />
+            <Button text="X" fx:id="exitButton" styleClass="navbar-button2" />
+        </HBox>
+
+        <!-- Main Content -->
+        <VBox alignment="CENTER" spacing="10" VBox.vgrow="ALWAYS">
+            <Label text="Welcome to WiFi Subscription Management" styleClass="title" />
+            <AnchorPane fx:id="dashboardContent" styleClass="content-box">
+                <!-- Dashboard content will be injected here -->
+            </AnchorPane>
+            <Label fx:id="noContentLabel" text="No content in table" visible="false" />
+        </VBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,49 @@
+/* Login Button Styling */
+#loginButton {
+    -fx-background-color: #3D3D3D; /* Warna latar default */
+    -fx-font-size: 18px; /* Tambahkan satuan 'px' untuk konsistensi */
+    -fx-background-radius: 20; /* Radius tombol */
+    -fx-text-fill: #fcf9f9; /* Warna teks */
+    -fx-cursor: hand; /* Ubah cursor menjadi pointer */
+    -fx-padding: 10 20; /* Tambahkan padding untuk ukuran tombol */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0, 2, 2); /* Efek bayangan */
+}
+
+#loginButton:hover {
+    -fx-background-color: #555555; /* Warna berubah saat hover */
+    -fx-text-fill: #ffffff; /* Warna teks */
+    -fx-scale-x: 1.05; /* Sedikit memperbesar tombol */
+    -fx-scale-y: 1.05;
+}
+
+#loginButton:pressed {
+    -fx-background-color: #222222; /* Warna lebih gelap saat tombol ditekan */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0, 2, 2); /* Bayangan lebih intens */
+}
+
+/* Styling untuk TextField dan PasswordField */
+.text-field, .password-field {
+    -fx-background-color: #F72C5B; /* Warna latar default */
+    -fx-border-color: transparent; /* Hilangkan border default */
+    -fx-border-width: 0 0 2px 0; /* Garis bawah saja */
+    -fx-border-radius: 0; /* Radius border nol */
+    -fx-text-fill: #FFFFFF; /* Warna teks */
+    -fx-font-size: 14px; /* Ukuran teks */
+    -fx-padding: 5px; /* Padding internal */
+    -fx-cursor: text; /* Kursor teks */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 1, 1); /* Tambahkan sedikit shadow */
+}
+
+.text-field:hover, .password-field:hover {
+    -fx-border-color: black; /* Ubah warna border saat hover */
+    -fx-border-width: 0 0 3px 0; /* Tebalkan garis bawah saat hover */
+    -fx-background-color: #D8234B; /* Sedikit lebih terang saat hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 2, 2); /* Shadow lebih jelas */
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: black; /* Warna border saat field difokuskan */
+    -fx-border-width: 0 0 3px 0; /* Tebal saat fokus */
+    -fx-background-color: #D8234B; /* Warna latar saat fokus */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0, 2, 2); /* Shadow lebih kuat */
+}

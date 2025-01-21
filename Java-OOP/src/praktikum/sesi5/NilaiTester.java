@@ -50,20 +50,14 @@ class Nilai {
 
     public String getKeterangan() {
         char index = getIndex();
-        switch (index) {
-            case 'A':
-                return "Sangat Baik";
-            case 'B':
-                return "Baik";
-            case 'C':
-                return "Cukup";
-            case 'D':
-                return "Kurang";
-            case 'E':
-                return "Sangat Kurang";
-            default:
-                return "Tidak Valid";
-        }
+        return switch (index) {
+            case 'A' -> "Sangat Baik";
+            case 'B' -> "Baik";
+            case 'C' -> "Cukup";
+            case 'D' -> "Kurang";
+            case 'E' -> "Sangat Kurang";
+            default -> "Tidak Valid";
+        };
     }
 }
 

@@ -5,7 +5,7 @@ class Mobil {
     String warna;
     int kecepatan;
 
-    public Mobil() {
+    public Mobil(String aktivitas, String warna, int kecepatan) {
         this.aktivitas = aktivitas;
         this.warna = warna;
         this.kecepatan = kecepatan;
@@ -29,9 +29,7 @@ class Mobil {
 public class ClassMobil {
     
     public static void main(String[] args) {
-        Mobil mobilku = new Mobil();
-        mobilku.kecepatan = 0;
-        mobilku.warna = "Merah";
+        Mobil mobilku = new Mobil("parkir", "Merah", 0);
         mobilku.cekKecepatan();
         mobilku.cetakAtribut();
     }

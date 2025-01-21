@@ -1,0 +1,80 @@
+/* TableView Styling */
+.styled-table {
+  -fx-border-color: #dcdcdc;
+  -fx-border-width: calc(0.1vw); /* Lebar border adaptif */
+  -fx-background-color: #f9f9f9;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), calc(0.5vw), 0, calc(0.2vw), calc(0.2vw));
+  -fx-padding: calc(1vw); /* Padding adaptif */
+}
+
+.styled-table .column-header-background {
+  -fx-background-color: #34495e;
+}
+
+.styled-table .column-header,
+.styled-table .table-cell {
+  -fx-text-fill: black;
+  -fx-font-size: calc(1.2vh); /* Ukuran font adaptif */
+  -fx-alignment: CENTER_LEFT;
+}
+
+.styled-table .table-row-cell:hover {
+  -fx-background-color: #ecf0f1;
+  -fx-cursor: hand;
+}
+
+/* ComboBox Styling */
+.styled-combobox {
+  -fx-padding: calc(0.5vh); /* Padding adaptif */
+  -fx-background-color: white;
+  -fx-border-color: #bdc3c7;
+  -fx-border-radius: calc(0.3vw); /* Radius border adaptif */
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), calc(0.3vw), 0, calc(0.1vw), calc(0.1vw));
+}
+
+/* DatePicker Styling */
+.styled-datepicker {
+  -fx-padding: calc(0.5vh); /* Padding adaptif */
+  -fx-background-color: white;
+  -fx-border-color: #bdc3c7;
+  -fx-border-radius: calc(0.3vw); /* Radius border adaptif */
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), calc(0.3vw), 0, calc(0.1vw), calc(0.1vw));
+}
+
+/* TextField Styling */
+.styled-textfield {
+  -fx-padding: calc(0.5vh); /* Padding adaptif */
+  -fx-border-color: #bdc3c7;
+  -fx-border-width: calc(0.1vw); /* Lebar border adaptif */
+  -fx-background-color: white;
+  -fx-font-size: calc(1.2vh); /* Ukuran font adaptif */
+  -fx-border-radius: calc(0.3vw); /* Radius border adaptif */
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), calc(0.3vw), 0, calc(0.1vw), calc(0.1vw));
+  -fx-prompt-text-fill: #7f8c8d;
+}
+
+.styled-textfield:focused {
+  -fx-border-color: #1abc9c;
+  -fx-background-color: #f9f9f9;
+}
+
+/* Button Styling */
+.styled-button {
+  -fx-background-color: #2c3e50;
+  -fx-text-fill: white;
+  -fx-font-size: calc(1.2vh); /* Ukuran font adaptif */
+  -fx-padding: calc(0.5vh) calc(1.5vw); /* Padding adaptif */
+  -fx-border-radius: calc(0.3vw); /* Radius border adaptif */
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), calc(0.3vw), 0, calc(0.2vw), calc(0.2vw));
+  -fx-transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.styled-button:hover {
+  -fx-background-color: #1abc9c;
+  -fx-cursor: hand;
+}
+
+.styled-button:pressed {
+  -fx-background-color: #16a085;
+  -fx-transform: scale(0.98);
+}

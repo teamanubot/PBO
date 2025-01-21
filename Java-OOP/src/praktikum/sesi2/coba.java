@@ -13,6 +13,7 @@ public class coba {
             System.out.println("Criorrect!");
         } else {
             System.out.println("Incorrect!");
+            scn.close();
         }
     }
 }

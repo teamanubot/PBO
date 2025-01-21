@@ -1,0 +1,79 @@
+@startuml LatihanDiagram
+title Diagram Program Kendaraan
+
+
+interface Mesin {
+    + void hidupkanMesin()
+    + void matikanMesin()
+}
+
+interface Penumpang {
+    + void aturPenumpang(int jumlah)
+    + int getJumlahPenumpang()
+}
+
+interface FiturTambahan {
+    + void fiturTambahan()
+}
+
+abstract class Kendaraan {
+    - protected String nama
+    - protected int kapasitasMesin
+    - protected int penumpang
+    + public Kendaraan(String nama, int kapasitasMesin)
+    + public abstract void infoKendaraan()
+}
+
+class Mobil extends Kendaraan {
+    - private final boolean AC
+    + public Mobil(String nama, int kapasitasMesin, boolean AC)
+    + public void hidupkanMesin()
+    + public void matikanMesin()
+    + public void aturPenumpang(int jumlah)
+    + public int getJumlahPenumpang()
+    + public void fiturTambahan()
+    + public void infoKendaraan()
+}
+
+class Motor extends Kendaraan {
+    + public Motor(String nama, int kapasitasMesin)
+    + publicvoid hidupkanMesin()
+    + public void matikanMesin()
+    + public void aturPenumpang(int jumlah)
+    + public int getJumlahPenumpang()
+    + public void infoKendaraan()
+}
+
+class Bus extends Kendaraan {
+    - private final boolean WiFi
+    + public void hidupkanMesin()
+    + public void matikanMesin()
+    + public void aturPenumpang(int jumlah)
+    + public int getJumlahPenumpang()
+    + public void fiturTambahan()
+    + public void infoKendaraan()
+}
+
+class CetakKendaraan {
+    + public final void cetak(Kendaraan[] listKendaraan)
+}
+
+class MusicPlayer {
+    + public static void playMusic(String filePath)
+}
+
+class Main {
+    + public static void main(String[] args)
+}
+
+Kendaraan ..|> Mesin
+Kendaraan ..|> Penumpang
+Mobil ..|> FiturTambahan
+Bus ..|> FiturTambahan
+
+CetakKendaraan --> Kendaraan
+Main --> Kendaraan
+Main --> CetakKendaraan
+Main --> MusicPlayer
+
+@enduml

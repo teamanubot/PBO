@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardContentController">
+    <TableView fx:id="dashboardTable" layoutX="1.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="960.0">
+        <columns>
+            <TableColumn fx:id="colName" prefWidth="200.0" text="Name" />
+            <TableColumn fx:id="colPlanName" prefWidth="200.0" text="Plan Name" />
+            <TableColumn fx:id="colPrice" prefWidth="200.0" text="Price" />
+            <TableColumn fx:id="colStartDate" prefWidth="179.0" text="Start Date" />
+            <TableColumn fx:id="colEndDate" prefWidth="179.0" text="End Date" />
+        </columns>
+    </TableView>
+</AnchorPane>
